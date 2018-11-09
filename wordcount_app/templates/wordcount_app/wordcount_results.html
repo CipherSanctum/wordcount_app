@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block maincontent %}
+
+<h1 class="margintop100px">Word count RESULTS:</h1>
+
+<div style="border-radius: 30px/10px; border: solid medium sienna; padding: 5px; margin: 50px auto; overflow: auto;">
+
+  <h2><u>Original text:</u></h2>
+  <p>{{ full_text }}</p>
+
+
+  <h3 class="margintop50px"><u>There are <span style="font-size:2em;" class="tnr">{{ word_length }}</span> words in your text.</u></h3>
+
+  <p class="correct padding5px">This function shows the most used value first. I also filtered out all commas, periods, semicolons, and colons. So if you put in something like: <em>hello</em> and
+    <em>hello<b style="font-size:2em;">,</b></em>... It will remove the comma at the end of the 2nd hello, so there won't be 2 separate counts of the same word. I also used the flex box css property
+    that will automatically center all elements based on the containing box. If you go to the bottom of the screen, notice how the last few elements are all spaced evenly, even if there aren't
+    the same amount of elements there as there are above. If you use a crappy browser like IE, you won't see that, but will just get the regular float fallback, so everything will go to the left.
+    So get the latest version of Chrome, Firefox, Brave, or something like them, for the best experience.</p>
+
+
+  <div class="flex-container">
+    {% for word, number in sorted_word_list %}
+      <p class="box_wordcount">{{ word }} == {{ number }}</p>
+    {% endfor %}
+  </div>
+
+</div>
+
+{% endblock maincontent %}

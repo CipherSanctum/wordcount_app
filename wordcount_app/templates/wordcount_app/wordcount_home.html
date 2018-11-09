@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block maincontent %}
+  <h1 class="margintop100px">Word count app:</h1>
+
+  <p>You can resize the text window below by dragging the bottom right corner.</p>
+
+  <form method="GET" action="{% url 'wordcount_app:wordcount_results' %}">
+    <textarea id="comment" class="inputbox" cols="80" rows="10" name="full_text" maxlength="1000"></textarea>
+    <input type="submit" value="Count!" class="submitbox margintop25px" />
+  </form>
+
+  <h2 style="color: red;">There is a max length of 1,000 characters allowed.</h2>
+
+  <h2>Characters left: <span id="chars_left" class="tnr padding5px correct">1000</span></h2>
+
+{% endblock maincontent %}
+
+
+
+{% block javascript %}
+  <script type="text/javascript">
+
+    var el = document.getElementById('comment');
+    function charCount(e){
+      var textEntered, charDisplay, counter;
+      textEntered = document.getElementById('comment').value;
+      charDisplay = document.getElementById('chars_left');
+      counter = (1000 - (textEntered.length));
+      charDisplay.textContent = counter + ' max characters left.';
+    }
+    el.addEventListener('input', charCount, false);
+
+  </script>
+{% endblock javascript %}
