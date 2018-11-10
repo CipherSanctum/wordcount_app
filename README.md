@@ -1,5 +1,8 @@
 # A character filtering word count app for Django 2.x
 
+### PROGRAM CREATED BY:
+Kevin / DiscoMushroom from PwnSauceDesigns.com
+
 ## DESCRIPTION:
 
 This word count app removes characters you don't want *(commas, periods, semicolons, colons, apostrophes, etc.)*. That way, a person
