@@ -1,7 +1,7 @@
 # A character filtering word count app for Django 2.x
 
 ### PROGRAM CREATED BY:
-Kevin / DiscoMushroom from PwnSauceDesigns.com
+Kevin from PwnSauceDesigns.com
 
 ## DESCRIPTION:
 
