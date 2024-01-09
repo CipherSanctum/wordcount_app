@@ -1,7 +1,7 @@
 # A character filtering word count app for Django 2.x
 
 ### PROGRAM CREATED BY:
-Kevin from CyberHavenProgramming.com
+Kevin from https://CipherSanctum.com
 
 ## DESCRIPTION:
 
@@ -14,4 +14,4 @@ who types *"hi"* and *"hi,"* into the *<textarea>* will get a count of 2 for *"h
 
 ### EXAMPLE:
 
-No signup or login required: https://CyberHavenProgramming.com/wordcount_app/
+No signup or login required: https://CipherSanctum.com/wordcount_app/
